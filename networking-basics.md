@@ -1,4 +1,4 @@
-Common Networking Ports – Quick Revision
+# Common Networking Ports – Quick Revision
 
 1️. FTP – File Transfer Protocol
 Port: 21
@@ -78,7 +78,7 @@ Brute force attacks
 Stolen credentials
 Very common in corporate network breaches.
 
-8️⃣ SMB
+12. SMB
 Port: 445
 Service: Server Message Block
 Use: File sharing in Windows
@@ -109,7 +109,7 @@ Range	Type
 
 ex: Port 12345 falls in → Registered ports.
 
-🔥 Ports Commonly Used by Malware / Backdoors
+# Ports Commonly Used by Malware / Backdoors
 1️⃣ Port 12345
 Malware: NetBus
 Purpose: Remote control of infected system
@@ -167,7 +167,7 @@ Port	Malware / Use
 8080	Alternative web server
 9001	Tor communication
 
-🌐 TCP vs UDP – Quick Revision
+# TCP vs UDP – Quick Revision
 1️⃣ TCP (Transmission Control Protocol)
 TCP is a connection-oriented protocol.
 That means a connection must be established before sending data.
@@ -227,7 +227,7 @@ UDP → “Ultra-fast Data Protocol”
 Fast
 No guarantee
 
-🌐 What is HTTP?
+# What is HTTP?
 HTTP (HyperText Transfer Protocol) is the protocol used for communication between a client and a web server.
 
 Example flow:
@@ -299,6 +299,7 @@ Data visible in URL	Yes	No
 Cacheable	Yes	Usually no
 Data size	Limited	Large
 
+# HTTP Status
 HTTP status codes are super easy once you see the pattern. They tell the browser what happened to the request.
 
 Whenever a browser sends a request, the server replies with a status code.
@@ -395,7 +396,7 @@ Code	Meaning
 401	Unauthorized
 403	Forbidden
 404	Not found
-500	Server error
+500	Server error 
 503	Service unavailable
 🔐 Cybersecurity Tip
 Security testers look carefully at status codes.
@@ -435,7 +436,7 @@ Code	Meaning
 504	Gateway timeout
 505	HTTP version not supported
 
-🌐 What Are HTTP Headers?
+## What Are HTTP Headers?
 
 HTTP headers are key–value pairs sent in a request or response that provide extra information about the communication.
 They help the server and client understand:
@@ -623,3 +624,11 @@ SameSite
 4. Server verifies user
 5. Server sends session cookie
 6. Browser sends cookie with future requests
+
+# DNS (Domain Name System)
+converts domain names → IP addresses.
+Humans remember names like:
+google.com
+But computers communicate using IP addresses:
+142.250.x.x
+So DNS acts like the internet’s phonebook 📖.
