@@ -632,3 +632,113 @@ google.com
 But computers communicate using IP addresses:
 142.250.x.x
 So DNS acts like the internet’s phonebook 📖.
+
+## How a Domain Resolves to an IP
+
+When you type a website in the browser, several DNS servers are involved.
+
+Example:
+
+www.google.com
+
+Step 1️⃣ Browser Cache Check
+
+The browser first checks its local cache.
+
+If it already knows the IP:
+
+google.com → 142.250.x.x
+
+Then DNS lookup stops.
+
+
+Step 2️⃣ OS Cache
+
+If the browser doesn't know it, the operating system cache is checked.
+
+
+Step 3️⃣ DNS Resolver (ISP)
+
+If still unknown, the request goes to a DNS resolver (usually from your ISP or public DNS like Google DNS).
+
+Example resolvers:
+
+8.8.8.8
+1.1.1.1
+
+Step 4️⃣ Root DNS Server
+
+If the resolver doesn't know the answer, it asks a Root DNS server.
+
+Root servers respond:
+
+I don't know google.com
+But ask the .com servers
+
+Step 5️⃣ TLD Server (Top Level Domain)
+
+Now the resolver asks the .com server.
+
+Example:
+
+Where is google.com?
+
+The TLD server replies:
+
+Ask Google's authoritative server
+
+Step 6️⃣ Authoritative DNS Server
+
+Finally the resolver asks Google's DNS server:
+
+What is the IP of google.com?
+
+Response:
+
+google.com → 142.250.x.x
+
+Step 7️⃣ Website Loads
+
+Now the browser sends an HTTP request to the IP.
+
+Browser → 142.250.x.x → Website loads
+
+🧠 Simple Flow
+
+User enters domain
+↓
+Browser cache
+↓
+OS cache
+↓
+DNS resolver
+↓
+Root server
+↓
+TLD server (.com)
+↓
+Authoritative DNS server
+↓
+IP returned
+↓
+Website loads
+
+
+### 🔐 Cybersecurity Angle
+
+DNS is often targeted in attacks.
+
+1️⃣ DNS Spoofing
+
+Fake DNS responses redirect users to malicious websites.
+
+Example:
+
+bank.com → attacker IP
+2️⃣ DNS Amplification Attack
+
+Used in DDoS attacks.
+
+3️⃣ DNS Tunneling
+
+Attackers hide data inside DNS queries.
